@@ -1,3 +1,3 @@
 FROM python:3
 
-RUN pip install --upgrade awscli
+RUN pip install --no-cache-dir --upgrade awscli
