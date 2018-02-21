@@ -1,3 +1,3 @@
 FROM python:3
 
-RUN pip install --no-cache-dir --upgrade awscli
+RUN apt-get update -y && apt-get install -y jq && pip install --no-cache-dir --upgrade awscli
