@@ -9,7 +9,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: syginc/awscli
+  IMAGE_NAME: awscli
 
 jobs:
   build_and_push:
@@ -32,4 +32,4 @@ jobs:
           context: latest
           file: latest/Dockerfile
           push: true
-          tags: ${{env.REGISTRY}}/${{env.IMAGE_NAME}}:python3.7
+          tags: ${{env.REGISTRY}}/${{ github.repository_owner }}/${{env.IMAGE_NAME}}:python3.7
