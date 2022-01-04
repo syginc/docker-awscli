@@ -9,7 +9,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: awscli
+  IMAGE_NAME: syginc/awscli
 
 jobs:
   build_and_push:
