@@ -32,4 +32,4 @@ jobs:
           context: latest
           file: latest/Dockerfile
           push: true
-          tags: ${{env.REGISTRY}}/${{ github.repository_owner }}/${{env.IMAGE_NAME}}:python3.7
+          tags: ${{env.REGISTRY}}/${{ github.repository_owner }}/${{env.IMAGE_NAME}}:latest
