@@ -27,10 +27,18 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push Docker image
+      - name: Build and push latest Docker image
         uses: docker/build-push-action@v2
         with:
           context: latest
           file: latest/Dockerfile
           push: true
           tags: ${{env.REGISTRY}}/${{ github.repository_owner }}/${{env.IMAGE_NAME}}:latest
+
+      - name: Build and push python 3.7 Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: latest
+          file: latest/Dockerfile
+          push: true
+          tags: ${{env.REGISTRY}}/${{ github.repository_owner }}/${{env.IMAGE_NAME}}:python3.7
