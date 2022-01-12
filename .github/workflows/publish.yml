@@ -12,7 +12,7 @@ jobs:
   publish-to-ghcr:
     uses: syginc/actions-util/.github/workflows/ghcr-publish.yml@master
     with:
-      image_name: syginc/awscli
+      image_name: ${{ github.repository_owner }}/awscli
       tag: |
         latest
         python3.7
