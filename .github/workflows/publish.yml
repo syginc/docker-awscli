@@ -16,7 +16,7 @@ jobs:
       tag: |
         latest
         python3.7
-      file_path: latest/Dockerfile
+      file_path: python3.7/Dockerfile
       context_path: .
     secrets:
       registry_username: ${{github.actor}}
