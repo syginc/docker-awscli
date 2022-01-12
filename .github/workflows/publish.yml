@@ -13,9 +13,7 @@ jobs:
     uses: syginc/actions-util/.github/workflows/ghcr-publish.yml@master
     with:
       image_name: ${{ github.repository_owner }}/awscli
-      tag: |
-        latest
-        python3.7
+      tag: python3.7
       file_path: python3.7/Dockerfile
       context_path: .
     secrets:
